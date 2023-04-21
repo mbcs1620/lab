@@ -22,7 +22,7 @@ class Test:
         assert self.a1.deposit(5) is True
         assert self.a1.get_balance() == 5
         
-    def test_deposit(self):
+    def test_withdraw(self):
         assert self.a1.deposit(100) is True
         assert self.a1.withdraw(-3.5) is False
         assert self.a1.get_balance() == 100
