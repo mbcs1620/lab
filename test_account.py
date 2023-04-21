@@ -1,4 +1,5 @@
 from account import *
+from pytest import *
 
 class Test:
     def setup_method(self):
@@ -25,16 +26,13 @@ class Test:
         assert self.a1.deposit(100) is True
         assert self.a1.withdraw(-3.5) is False
         assert self.a1.get_balance() == 100
-        
-        assert self.a1.deposit(100) is True
+
         assert self.a1.withdraw(0) is False
         assert self.a1.get_balance() == 100
-        
-        assert self.a1.deposit(100) is True
+
         assert self.a1.withdraw(120) is False
         assert self.a1.get_balance() == 100
-        
-        assert self.a1.deposit(100) is True
+
         assert self.a1.withdraw(50.5) is True
         assert self.a1.get_balance() == 49.5
         
