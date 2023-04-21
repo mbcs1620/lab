@@ -12,7 +12,7 @@ class Account:
         """
         Function to make a deposit into account.
         :param amount: Deposit amount.
-        :return: Transaction success.
+        :return: True indicates transaction success. False indicates transaction failure.
         """
         if amount > 0:
             self.__account_balance += amount
@@ -24,7 +24,7 @@ class Account:
         """
         Function to make withdraw from account.
         :param amount: Withdraw amount.
-        :return: Transaction success.
+        :return: True indicates transaction success. False indicates transaction failure.
         """
         if amount > self.__account_balance:
             return False
